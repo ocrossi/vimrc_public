@@ -1,31 +1,9 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" !!!  Need neovim for blamer plugin !!! "
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'morhetz/gruvbox'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'itchyny/lightline.vim'
-Plugin 'prettier/vim-prettier'
-Plugin 'gcmt/taboo.vim'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
-Plugin 'APZelos/blamer.nvim'
-Plugin 'tpope/vim-fugitive'
-call vundle#end()
-
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 set laststatus=2
-let g:ycm_path_to_python_interpreter='/usr/local/bin/python3'
 
 filetype plugin indent on
-let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_log_level = 'debug'
 "basic stuff
 set mouse=a
 set nu
@@ -62,7 +40,6 @@ let mapleader = " "
 nnoremap  <Leader>sf :CtrlP<space>
 vnoremap  <Leader>sf <esc>:CtrlP<space>
 
-"tab  in vim? really ?? mind=blown
 nnoremap <Leader><left> :tabprev<cr>
 nnoremap <Leader><right> :tabnext<cr>
 nnoremap <F5> :tabnew<cr>
@@ -107,7 +84,6 @@ noremap <C-l> <C-W>l
 "withdraw highlights
 nnoremap <Leader>h :nohlsearch<CR>
 
-let g:ycm_server_python_interpreter = '/usr/bin/python3.8'
 
 "fzf personnal shortcuts
 nnoremap <leader>o :Files<cr>
